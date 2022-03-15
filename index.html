@@ -7,6 +7,9 @@
             document.getElementById("text").innerText = "I Love God";
             document.getElementById("author").innerText = "The Author";
         }
+        function generateQuote() {
+            console.log("new quote")
+        }
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +21,7 @@
     <wrapper id = "quote-box">
         <div id="text"></div>
         <div id="author"></div>
-        <button id="new-quote">New Quote</button>
+        <button id="new-quote" onclick="generateQuote()">New Quote</button>
         <a id="tweet-quote">Tweet quote</a>
     </wrapper>
 </body>
