@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        const quoteBank = [
-            {
-                author: "-Nelson Mandela",
-                quote: "The greatest glory in living lies not in never falling, but in rising every time we fall. "
-            },
-            {
-                author: "Walt Disney",
-                quote: "The way to get started is to quit talking and begin doing."
-            },
-            {
-                author: "Steve Jobs",
-                quote: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking."
-            },
-            {
-                author: "Eleanor Roosevelt",
-                quote: "If life were predictable it would cease to be life, and be without flavor."
-            }
-        ]
-        window.onload = init
-        function init() {
-            generateQuote()
-        }
-        function generateQuote() {
-            console.log("Generated new quote")
-            document.getElementById("text").innerText = "I Love God";
-            document.getElementById("author").innerText = "The Author";
-        }
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script>
+       const quoteBank = [
+    {
+        author: "-Nelson Mandela",
+        quote: "The greatest glory in living lies not in never falling, but in rising every time we fall. "
+    },
+    {
+        author: "Walt Disney",
+        quote: "The way to get started is to quit talking and begin doing."
+    },
+    {
+        author: "Steve Jobs",
+        quote: "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking."
+    },
+    {
+        author: "Eleanor Roosevelt",
+        quote: "If life were predictable it would cease to be life, and be without flavor."
+    }
+]
+
+window.onload = init
+function init() {
+    generateQuote()
+}
+
+function generateQuote() {
+    console.log("new quote")
+    var quoteSize = quoteBank.length
+    var randomIndex = Math.floor(Math.random() * quoteSize)
+    var randomQuoteData = quoteBank[randomIndex]
+    document.getElementById("text").innerText = randomQuoteData.quote
+    document.getElementById("author").innerText = randomQuoteData.author;
+}
+   </script>
     <title>Random Quote Machine</title>
 </head>
+
+
 <body>
+    
     <script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <wrapper id = "quote-box">
         <div id="text"></div>
