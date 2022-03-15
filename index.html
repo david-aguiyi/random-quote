@@ -4,11 +4,12 @@
     <script>
         window.onload = init
         function init() {
-            document.getElementById("text").innerText = "I Love God";
-            document.getElementById("author").innerText = "The Author";
+            generateQuote()
         }
         function generateQuote() {
-            console.log("new quote")
+            console.log("Generated new quote")
+            document.getElementById("text").innerText = "I Love God";
+            document.getElementById("author").innerText = "The Author";
         }
     </script>
     <meta charset="UTF-8">
