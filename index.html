@@ -4,7 +4,7 @@
    <script>
        const quoteBank = [
     {
-        author: "-Nelson Mandela",
+        author: "Nelson Mandela",
         quote: "The greatest glory in living lies not in never falling, but in rising every time we fall. "
     },
     {
@@ -26,24 +26,27 @@ function init() {
     generateQuote()
 }
 
-function generateQuote() {
+    function generateQuote() {
     console.log("new quote")
+    let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" 
+
+    
+    
     var quoteSize = quoteBank.length
     var randomIndex = Math.floor(Math.random() * quoteSize)
     var randomQuoteData = quoteBank[randomIndex]
+
+    let quoteApiFormat = randomQuoteData.quote.replace(/ /g, "%20")
+    twitterLink += quoteApiFormat
+    
+    let authorApiFormat = randomQuoteData.author.replace(/ /g, "%20")
+    twitterLink +=  "-" + authorApiFormat
+
     document.getElementById("text").innerText = randomQuoteData.quote
     document.getElementById("author").innerText = randomQuoteData.author;
     document.getElementById("tweet-quote").href = twitterLink
+}
 
-    twitterLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
-
-   let quoteApiFormat = randomQuoteData.quote.replace(/ /g , "%20")
-   twitterLink += quoteApiFormat 
-
-   let authorApiFormat = randomQuoteData.author.replace(/ /g , "%20")
-   twitterLink += authorApiFormat
-
-}   
 
 
    </script>
@@ -58,7 +61,7 @@ function generateQuote() {
         <div id="text"></div>
         <div id="author"></div>
         <button id="new-quote"  onClick="generateQuote()">New Quote</button>
-        <a id="tweet-quote" target = "#" href = "#">Tweet quote</a>
+        <a id="tweet-quote" target = "#" href ="#" >Tweet quote</a>
     </wrapper>
 </body>
 </html>
