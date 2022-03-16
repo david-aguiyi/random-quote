@@ -33,7 +33,19 @@ function generateQuote() {
     var randomQuoteData = quoteBank[randomIndex]
     document.getElementById("text").innerText = randomQuoteData.quote
     document.getElementById("author").innerText = randomQuoteData.author;
-}
+    document.getElementById("tweet-quote").href = twitterLink
+
+    twitterLink = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' 
+
+   let quoteApiFormat = randomQuoteData.quote.replace(/ /g , "%20")
+   twitterLink += quoteApiFormat 
+
+   let authorApiFormat = randomQuoteData.author.replace(/ /g , "%20")
+   twitterLink += authorApiFormat
+
+}   
+
+
    </script>
     <title>Random Quote Machine</title>
 </head>
@@ -46,7 +58,7 @@ function generateQuote() {
         <div id="text"></div>
         <div id="author"></div>
         <button id="new-quote"  onClick="generateQuote()">New Quote</button>
-        <a id="tweet-quote" target="#" src="#" href="#">Tweet quote</a>
+        <a id="tweet-quote" target = "#" href = "#">Tweet quote</a>
     </wrapper>
 </body>
 </html>
