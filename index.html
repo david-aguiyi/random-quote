@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="random.css">
    <script>
        const quoteBank = [
     {
@@ -26,11 +28,9 @@ function init() {
     generateQuote()
 }
 
-    function generateQuote() {
+function generateQuote() {
     console.log("new quote")
     let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" 
-
-    
     
     var quoteSize = quoteBank.length
     var randomIndex = Math.floor(Math.random() * quoteSize)
@@ -46,10 +46,9 @@ function init() {
     document.getElementById("author").innerText = randomQuoteData.author;
     document.getElementById("tweet-quote").href = twitterLink
 }
-
-
-
    </script>
+
+ 
     <title>Random Quote Machine</title>
 </head>
 
