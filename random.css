@@ -8,6 +8,7 @@
     background-color: rgb(0, 183, 255);
     justify-content: center;
     user-select: none;
+    height: 100vh;
 }
 
 #author {
