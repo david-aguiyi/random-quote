@@ -1,24 +1,20 @@
 * {
-    font-size: 1.5rem;
-    text-align: center;
-    
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-.body{
-    background-color: rgb(0, 183, 255);
-    justify-content: center;
-    user-select: none;
-    height: 100vh;
+.body {
+  background-color: rgb(0, 183, 255);
+  justify-content: center;
+  user-select: none;
+  height: 100vh;
 }
 
 #author {
-    text-align: end;
-    font-size: 30px;
-    font-weight: 350
+  text-align: end;
+  font-size: 30px;
+  font-weight: 350;
 }
-
-
-
-
-  
-  
+.card {
+  border-radius: 20px;
+}
